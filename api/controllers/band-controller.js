@@ -27,6 +27,12 @@ class BandControllerClass {
             .then(documents => res.json(documents))
             .catch(error => res.json({error: error.message}));
     }
+
+	getArtistsOfBand(req, res) {
+		const id = req.params.id;
+		// TODO: Query artists
+	}
+
 }
 
 export const bandController = new BandControllerClass();
