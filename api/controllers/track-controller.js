@@ -8,6 +8,14 @@ class TrackControllerClass {
             .catch(error => res.json({error: error.message}));
     }
 
+	getComments(req, res) {
+		const id = req.params.id;
+
+		return trackModel.getCommentsOfTrack(id)
+		    .then(documents => res.json(documents))
+		    .catch(error => res.json({error: error.message}));
+	}
+
 	addComment(req, res) {
 		const id = req.params.id;
 		const name = req.body.name;
