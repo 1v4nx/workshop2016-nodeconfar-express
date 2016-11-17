@@ -4,7 +4,8 @@ import colors from 'colors/safe';
 
 import {
     trackController,
-    bandController
+    bandController,
+    albumController
 } from './controllers';
 
 
@@ -17,3 +18,6 @@ router.get('/bands', bandController.getList);
 router.get('/bands/:id', bandController.getOne);
 router.get('/bands/:id/albums', bandController.getAlbumsOfBand);
 router.get('/bands/:id/artists', bandController.getArtistsOfBand);
+
+router.get('/albums/:id', albumController.getOne);
+router.get('/albums/:id/tracks', albumController.getTracksOfAlbum);

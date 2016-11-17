@@ -35,6 +35,9 @@ class BandControllerClass {
             .catch(error => res.json({error: error.message}));
 	}
 
+
+
+
 }
 
 export const bandController = new BandControllerClass();
