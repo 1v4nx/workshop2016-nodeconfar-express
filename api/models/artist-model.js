@@ -10,6 +10,15 @@ export class ArtistModelClass {
         return database.findOne({docType: docTypes.ARTIST, '_id': id})
     }
 
+    getByIdsList(idList) {
+        return database.find(
+            {
+                docType: docTypes.ARTIST,
+                "_id": {"$in": idList}
+            }
+        )
+    }
+
 }
 
 export const artistModel = new ArtistModelClass();

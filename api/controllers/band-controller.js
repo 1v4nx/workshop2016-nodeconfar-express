@@ -30,7 +30,9 @@ class BandControllerClass {
 
 	getArtistsOfBand(req, res) {
 		const id = req.params.id;
-		// TODO: Query artists
+        return bandModel.getArtistsOfBand(id)
+            .then(documents => res.json(documents))
+            .catch(error => res.json({error: error.message}));
 	}
 
 }
