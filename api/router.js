@@ -16,3 +16,4 @@ router.get('/tracks', trackController.getList);
 router.get('/bands', bandController.getList);
 router.get('/bands/:id', bandController.getOne);
 router.get('/bands/:id/albums', bandController.getAlbumsOfBand);
+router.get('/bands/:id/artists', bandController.getArtistsOfBand);
